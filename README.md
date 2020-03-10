@@ -55,6 +55,7 @@ links or additional useful information.  Format is up to you.
 <!-- License is required -->
 ## License 
 
-<!-- If open-sourced, remove this and make a LICENSE file at the repo root. 
-  Else: -->
-Copyright Thesis, Inc., 2020
+See [LICENSE](./LICENSE) for full details.
+
+<!-- Before open-sourcing this module, Remove this comment and update the
+  LICENSE file at the repo root. Else: Copyright Thesis, Inc., 2020 -->
