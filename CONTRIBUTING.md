@@ -43,3 +43,10 @@ following lines:
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ```
+
+## Version tags
+
+We recommend using version tags, ideally [using an automated process](https://github.com/marketplace/actions/github-tag-bump#bumping) that bumps the
+version on merge to master.
+
+All pre-release versions should be lower than `v1.0.0`
