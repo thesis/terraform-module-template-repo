@@ -7,12 +7,12 @@ Registry.
 
 ## Getting Started
 
-<!-- After creating your copy of the repo, you should replace this section with any 
+<!-- After creating your copy of the repo, you should replace this section with any
 information specific to development on your module. :)
  -->
 
 This repo has been set up as a Github template repo. You can generate a new
-repo from this one using the "Use this template" option above the "Clone or 
+repo from this one using the "Use this template" option above the "Clone or
 download" button.
 
 
@@ -31,12 +31,12 @@ Run `pre-commit install` at the root of your repo.
 If you prefer to generate your own docs, keep the following line commented out
 in `.pre-commit.yaml`:  `- id: terraform_docs`. Keep in mind, however, that if
 you choose to publish your module to the Terraform Registry, docs will be auto-
-generated, so you may want to keep that hook in place to see how it behaves 
+generated, so you may want to keep that hook in place to see how it behaves
 before you publish.
 
 If you want to use the terraform_docs pre-commit hook, uncomment the above line.
 
-This hook will delete and replace anything in your `README.md` between the 
+This hook will delete and replace anything in your `README.md` between the
 following lines:
 
 ```
@@ -46,7 +46,46 @@ following lines:
 
 ## Version tags
 
-We recommend using version tags, ideally [using an automated process](https://github.com/marketplace/actions/github-tag-bump#bumping) that bumps the
-version on merge to master.
+We're using a github action to automatically create tags and bump the version
+on merge to master.
 
-All pre-release versions should be lower than `v1.0.0`
+We have already installed this action here, but disabled; you can opt in to
+using it following the [instructions below]().
+
+For full usage instructions, consult the [official documentation](https://github.com/marketplace/actions/github-tag-bump#usage)
+
+
+### How to use the github action
+
+To use this action, in the following block of `.github/workflows/bump_tag.yml`
+```
+on:
+  push:
+    branches-ignore:
+      - '**'
+    # branches:
+    #   - master
+```
+
+Remove the `branches-ignore` and `- '**'` lines, and uncomment the
+`branches` and `- master` lines. Commit your changes and open a PR.
+
+The action will automatically run at your PR merge to master.
+
+
+### Recommended Workflow and Settings
+
+The first merge to master will create a tag (`0.1.0`)if no tag is present. All
+versions prior to open-sourcing your module should remain lower than `1.0.0`
+
+The only required environment variable is `GITHUB_TOKEN`. Set any
+[optional environment variables](https://github.com/marketplace/actions/github-tag-bump#options)
+
+We recommend the following:
+- Leave `DEFAULT_BUMP` at its default ("minor").
+- Do not change the `fetch-depth` config value in the settings for the
+`actions/checkout@master` action used by the Bump tag action.
+- A depth of "1" means the merge commit is the only commit fetched in order to
+determine bump version.
+- Make sure the merge commit contains either the `#major` or `#patch` tag, if
+the given PR is not a "minor" version release.
