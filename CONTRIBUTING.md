@@ -75,7 +75,7 @@ Or just comment out the contents of the yaml?
 
 Set any [optional environment variables](https://github.com/marketplace/actions/github-tag-bump#options)
 
-<!-- TODO: Set recommendations for the optional env var, if different from defaults?
+TODO: Set recommendations for the optional env var, if different from defaults?
 ```
 Environment Variables
 
@@ -86,4 +86,3 @@ CUSTOM_TAG (optional) - Set a custom tag, useful when generating tag based on f.
 SOURCE (optional) - Operate on a relative path under $GITHUB_WORKSPACE.
 DRY_RUN (optional) - Determine the next version without tagging the branch. The workflow can use the outputs new_tag and tag in subsequent steps. Possible values are true and false (default).
 ```
- -->
