@@ -7,9 +7,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    # - uses: actions/checkout@master
+    #   with:
+    #     fetch-depth: '0'
+    - uses: actions/checkout@v2
       with:
+        ref: "add-more-template-files-and-pre-commit-sandbox"
         fetch-depth: '0'
+
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@master
       env:
