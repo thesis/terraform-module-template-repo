@@ -3,6 +3,7 @@ on:
   push:
     branches:
       # - master
+      - add-more-template-files-and-pre-commit-sandbox
 jobs:
   build:
     runs-on: ubuntu-latest
