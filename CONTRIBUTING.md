@@ -22,9 +22,8 @@ We use [Terraform pre-commit hooks](https://github.com/antonbabenko/pre-commit-t
 to ensure consitent formatting and to auto-generate documentation.
 
 ### Installation
-Make sure you have all [relevant dependencies](https://github.com/antonbabenko/pre-commit-terraform/blob/master/README.md#1-install-dependencies) installed.
-
-Run `pre-commit install` at the root of your repo.
+Make sure you have all [pre-commit](https://github.com/antonbabenko/pre-commit-terraform/blob/master/README.md#1-install-dependencies) installed, then run `pre-commit install` at
+the root of your repo.
 
 ### Usage
 
