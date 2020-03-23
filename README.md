@@ -19,7 +19,6 @@ along the following lines:
 There are multiple examples included in the [examples](./examples/) folder but 
 simple usage is as follows:
  -->
-
 Sample module block showing required fields configured.  You can have
 multiple examples if it makes sense for the module.
 
@@ -34,7 +33,9 @@ module "your_custom_name_for_your_instance_of_this_module" {
 }
 ```
 
-<!-- Inputs section  is required -->
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- The following Inputs example will be over-written by pre-commit hooks, 
+  and is here only as an example in case you opt not to use the hooks. -->
 ## Inputs
 
 Table of available module inputs in the format:
@@ -42,6 +43,8 @@ Table of available module inputs in the format:
 |Name | Description | Type |Default | Required
 --- | --- | --- | --- | --- |
 `inputName`| Description of this input | input type | `default value` | boolean
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 <!-- Notes section is optional -->
 ## Notes
@@ -52,6 +55,7 @@ links or additional useful information.  Format is up to you.
 <!-- License is required -->
 ## License 
 
-<!-- If open-sourced, remove this and make a LICENSE file at the repo root. 
-  Else: -->
-Copyright Thesis, Inc., 2020
+See [LICENSE](./LICENSE) for full details.
+
+<!-- Before open-sourcing this module, Remove this comment and update the
+  LICENSE file at the repo root. Else: Copyright Thesis, Inc., 2020 -->
