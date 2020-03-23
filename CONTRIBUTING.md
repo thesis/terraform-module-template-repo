@@ -49,26 +49,9 @@ following lines:
 We're using a github action to automatically create tags and bump the version
 on merge to master.
 
-We have already installed this action here, but disabled; you can opt in to
-using it following the [instructions below]().
+We have already installed this action here.
 
 For full usage instructions, consult the [official documentation](https://github.com/marketplace/actions/github-tag-bump#usage)
-
-
-### How to use the github action
-
-To use this action, in the following block of `.github/workflows/bump_tag.yml`
-```
-on:
-  push:
-    branches-ignore:
-      - '**'
-    # branches:
-    #   - master
-```
-
-Remove the `branches-ignore` and `- '**'` lines, and uncomment the
-`branches` and `- master` lines. Commit your changes and open a PR.
 
 The action will automatically run at your PR merge to master.
 
