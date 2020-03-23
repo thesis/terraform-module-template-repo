@@ -61,8 +61,11 @@ The action will automatically run at your PR merge to master.
 The first merge to master will create a tag (`0.1.0`)if no tag is present. All
 versions prior to open-sourcing your module should remain lower than `1.0.0`
 
-The only required environment variable is `GITHUB_TOKEN`. Set any
-[optional environment variables](https://github.com/marketplace/actions/github-tag-bump#options)
+The only required environment variable is `GITHUB_TOKEN`, which github
+automatically generates. While it's sourced via `${{ secrets.GITHUB_TOKEN }}`,
+you will not see it in your repo's secrets dashboard.
+
+Set any [optional environment variables](https://github.com/marketplace/actions/github-tag-bump#options)
 
 We recommend the following:
 - Leave `DEFAULT_BUMP` at its default ("minor").
